@@ -13,7 +13,7 @@ to indicate major/minor key. The value can also be declared in Hertz with two de
 
 - The third value declares how many milliseconds of silence that follows after the tone has been played.
 
-As an example, if you wanted the music box to play the A3 for 5 seconds, 
+As an example, if you wanted the music box to play A3 for 5 seconds, 
 followed by a 1 second silence, then B3 for 2 seconds and another second of silence, the notation would be: 
 
 ``a4 5000 1000 b4 2000 1000``
