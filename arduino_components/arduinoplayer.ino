@@ -1,5 +1,6 @@
 const int ledPin = 13;
 const int switchPin = 2;
+const int piezoPin = 8;
 
 int switchVal;
 int current_loop = 0;
@@ -35,7 +36,7 @@ void setup() {
 
 void loop() {
   if (playing && index < length) {
-    tone(8,pitch[index],duration[index]);
+    tone(piezoPin,pitch[index],duration[index]);
     delay(duration[index]);
     delay(pause[index]);
     if (index==loop_end[current_loop]) {

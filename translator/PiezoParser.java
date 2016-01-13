@@ -8,7 +8,7 @@ import java.io.BufferedWriter;
 class PiezoParser {
     
     // frequencies in Hz for C-G,A,B in octave 0 
-    static double[] pitches = { // as there are no B#/Cb or E#/Fb, these indices only contain 0
+    static double[] pitches = { // as there are no B#/Cb or E#/Fb (...right?), these indices are set to 0
         27.50,29.14,30.87,0,16.35,17.32,18.35,
         19.35,20.60,0,21.83,23.12,25.96
     };
@@ -91,7 +91,7 @@ class PiezoParser {
     static long process(String str) {
         str=str.replaceAll("H","B"); // if this standard is used, replace H with B
         double pitch = 0;
-        if (str.matches("[\\d]+\\.[\\d]{2}+")) {
+        if (str.matches("[\\d]+\\.[\\d]{2}")) {
             
             pitch = ((double)Integer.parseInt(str.replace("\\.","")))/100;
         } else if (str.matches("[A-G].*")) {
